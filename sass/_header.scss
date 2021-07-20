@@ -3,4 +3,38 @@ header {
   height: 60px;
   position: fixed;
   background: black;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  .brandContainer {
+    width: 50%;
+    img {
+      height: 100%;
+    }
+  }
+  .menuContainer {
+    width: 50%;
+    text-align: end;
+
+    .menuButton {
+      padding-right: 10px;
+    }
+    .menuContent {
+      position: relative;
+
+      .menu {
+        list-style: none;
+        position: absolute;
+        top: 20px;
+        right: -768px;
+        height: 100vh;
+        background-color: white;
+        width: 50%;
+        transition: right 0.3s ease-in-out;
+      }
+      .show {
+        right: 0px;
+      }
+    }
+  }
 }

@@ -1,3 +1,8 @@
+function toggleMenu() {
+  var menu = document.querySelector("#menu");
+  menu.classList.toggle("show");
+}
+
 var swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",

@@ -15,13 +15,17 @@
   </head>
   <body>
     <header>
-      <section class="branchContainer"></section>
+      <section class="brandContainer">
+        <img src="./assets/imgs/logo.jpg" alt="Logo" />
+      </section>
 
       <section class="menuContainer">
-        <button id="menuButton">Menu</button>
+        <button class="menuButton" onclick="toggleMenu()" id="menuButton">
+          Menu
+        </button>
 
         <nav class="menuContent">
-          <ul class="menu">
+          <ul class="menu" id="menu">
             <li class="menuItem"><a href="#about">Nosotros</a></li>
             <li class="menuItem"><a href="#philosophy">Filosofía</a></li>
             <li class="menuItem"><a href="#team">Equipo</a></li>
