@@ -1,0 +1,21 @@
+.aboutContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  .aboutDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+      font-size: 1.7rem;
+      line-height: 1.7rem + 1rem;
+    }
+  }
+  .aboutCard {
+    padding: 20px;
+    background: black;
+    .cardContent {
+      background-color: grey;
+    }
+  }
+}

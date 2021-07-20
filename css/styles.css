@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
   position: relative;
@@ -56,16 +60,17 @@ header .menuContainer .menuButton {
 
 header .menuContainer .menuContent {
   position: relative;
+  width: 50vw;
 }
 
 header .menuContainer .menuContent .menu {
+  width: 100%;
   list-style: none;
   position: absolute;
   top: 20px;
   right: -768px;
   height: 100vh;
   background-color: white;
-  width: 50%;
   -webkit-transition: right 0.3s ease-in-out;
   transition: right 0.3s ease-in-out;
 }
@@ -75,8 +80,49 @@ header .menuContainer .menuContent .show {
 }
 
 .bannerContainer {
-  height: 100vh;
+  background: red;
+  height: 80vh;
   -webkit-clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
           clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
+}
+
+.bannerContainer .swiper-container .swiper-wrapper .swiper-slide img {
+  height: 100%;
+}
+
+.aboutContainer {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutContainer .aboutDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.aboutContainer .aboutDescription p {
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+}
+
+.aboutContainer .aboutCard {
+  padding: 20px;
+  background: black;
+}
+
+.aboutContainer .aboutCard .cardContent {
+  background-color: grey;
 }
 /*# sourceMappingURL=styles.css.map */

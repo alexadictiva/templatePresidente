@@ -21,15 +21,17 @@ header {
     }
     .menuContent {
       position: relative;
+      width: 50vw;
 
       .menu {
+        width: 100%;
         list-style: none;
         position: absolute;
         top: 20px;
         right: -768px;
         height: 100vh;
         background-color: white;
-        width: 50%;
+
         transition: right 0.3s ease-in-out;
       }
       .show {
