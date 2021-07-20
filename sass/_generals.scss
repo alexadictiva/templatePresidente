@@ -1,12 +1,20 @@
-@import "_variables";
-@import "_generals";
-@import "_header";
-@import "_banner";
-@import "_intro";
-@import "_founder.scss";
-@import "_staff.scss";
-@import "_portfolio.scss";
-@import "_timeline.scss";
-@import "_history.scss";
-@import "_contact.scss";
-@import "_footer.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $fontBase;
+  position: relative;
+}
+main {
+  padding-top: 60px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

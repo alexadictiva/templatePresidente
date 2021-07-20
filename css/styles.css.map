@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AACD,AAAA,IAAI,CAAC;EACH,WAAW,EDNF,UAAU;ECOnB,QAAQ,EAAE,QAAQ;CACnB;;AACD,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,IAAI;CAClB;;AACD,AAAA,GAAG,CAAC;EACF,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,IAAI;CACb;;AAED,AAAA,CAAC,CAAC;EACA,eAAe,EAAE,IAAI;CACtB;;ACnBD,AAAA,MAAM,CAAC;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,KAAK;EACf,UAAU,EAAE,KAAK;CAClB;;ACLD,AAAA,gBAAgB,CAAC;EACf,MAAM,EAAE,KAAK;EACb,SAAS,EAAE,+CAA+C;CAC3D",
+    "sources": [
+        "../sass/styles.scss",
+        "../sass/_variables.scss",
+        "../sass/_generals.scss",
+        "../sass/_header.scss",
+        "../sass/_banner.scss",
+        "../sass/_intro.scss",
+        "../sass/_founder.scss",
+        "../sass/_team.scss",
+        "../sass/_cronology.scss",
+        "../sass/_portfolio.scss",
+        "../sass/_footer.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}
