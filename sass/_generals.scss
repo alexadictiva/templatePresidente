@@ -7,8 +7,11 @@
   font-size: 62.5%;
 }
 body {
-  font-family: $fontBase;
+  font: $body1;
   position: relative;
+  background-color: $bgColorPrimary;
+  overflow-x: hidden;
+  max-width: 1280px;
 }
 main {
   padding-top: 60px;

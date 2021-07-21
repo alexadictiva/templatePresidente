@@ -1,0 +1,65 @@
+.philosophyContainer {
+  @include paddingSection1;
+  .philosophyDescription {
+    padding: 20px;
+    background-color: $bgColorTertiary;
+    p {
+      padding: 20px;
+      background-color: $bgColorQuaternary;
+      color: $fontColorSecondary;
+    }
+  }
+  .founderContainer {
+    background-color: $bgColorTertiary;
+    color: $fontColorSecondary;
+    display: flex;
+    flex-direction: column;
+    .founderImg {
+      display: flex;
+      justify-content: center;
+    }
+    .founderDescription {
+      padding: 20px;
+
+      & p:nth-child(1) {
+        padding: 5px;
+        text-transform: uppercase;
+        background-color: $bgColorSecondary;
+      }
+      & p:nth-child(3) {
+        font-style: italic;
+      }
+      h3,
+      a {
+        padding: 5px;
+        text-transform: uppercase;
+        background-color: $bgColorSecondary;
+      }
+      h3 {
+        margin-bottom: 5px;
+      }
+      a {
+        display: inline-block;
+        margin-bottom: 15px;
+        font: $caption;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .philosophyContainer {
+    .founderContainer {
+      flex-direction: row;
+      .founderImg {
+        width: 50%;
+      }
+      .founderDescription {
+        width: 50%;
+      }
+    }
+  }
+}

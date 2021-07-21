@@ -1,0 +1,41 @@
+.portfolioContainer {
+  @include paddingSection1;
+  background-color: $bgColorSecondary;
+  .portfolioContent {
+    padding: 40px 0;
+    p {
+      padding: 5px 40px;
+      font: $headLine4;
+      text-transform: uppercase;
+      color: $fontColorSecondary;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+      a {
+        color: $fontColorSecondary;
+      }
+      &::before {
+        content: "+ ";
+        color: $fontColorPrimary;
+        position: absolute;
+        left: 15px;
+      }
+      &:hover {
+        background-color: $bgColorPrimary;
+      }
+      &:hover a {
+        color: $fontColorPrimary;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolioContainer {
+    .portfolioContent {
+      p {
+        font: $headLine3;
+      }
+    }
+  }
+}

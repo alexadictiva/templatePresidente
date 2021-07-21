@@ -1,0 +1,40 @@
+.teamContainer {
+  @include paddingSection;
+  .directorioContainer,
+  .managementContainer {
+    margin-bottom: 20px;
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+    .swiper-wrapper {
+      margin-bottom: 40px;
+      .swiper-slide {
+        width: 100%;
+
+        font-size: 18px;
+        background: #fff;
+        border-bottom: solid $bgColorTertiary 5px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          margin-bottom: 10px;
+        }
+        h4 {
+          font: $body2;
+        }
+        p {
+          font: $caption;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

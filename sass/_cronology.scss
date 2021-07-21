@@ -1,0 +1,46 @@
+.cronologyContainer {
+  @include paddingSection;
+  background-color: $bgColorTertiary;
+  .cronologyContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    .cronologyCard {
+      img {
+        border-bottom: $white solid 4px;
+        margin-bottom: 5px;
+      }
+      h3 {
+        color: $fontColorSecondary;
+        font: $headLine3;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cronologyContainer {
+    padding: 40px;
+    .cronologyContent {
+      flex-wrap: wrap;
+      flex-direction: row;
+      .cronologyCard {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cronologyContainer {
+    padding: 80px;
+    .cronologyContent {
+      flex-wrap: wrap;
+      flex-direction: row;
+      .cronologyCard {
+        width: 22%;
+      }
+    }
+  }
+}
