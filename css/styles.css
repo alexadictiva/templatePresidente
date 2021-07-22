@@ -14,11 +14,11 @@ body {
   position: relative;
   background-color: #fff6e6;
   overflow-x: hidden;
-  max-width: 1280px;
 }
 
-main {
-  padding-top: 60px;
+.wrapper {
+  max-width: 1024px;
+  margin: auto;
 }
 
 img {
@@ -33,31 +33,36 @@ a {
 header {
   width: 100%;
   height: 60px;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+}
+
+header .wrapper {
   background: #000000;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 10;
 }
 
-header .brandContainer {
+header .wrapper .brandContainer {
   width: 50%;
 }
 
-header .brandContainer img {
+header .wrapper .brandContainer img {
   height: 100%;
 }
 
-header .menuContainer {
+header .wrapper .menuContainer {
   width: 50%;
   text-align: end;
 }
 
-header .menuContainer .menuButton {
+header .wrapper .menuContainer .menuButton {
   padding-right: 10px;
   background-color: transparent;
   border: 0;
@@ -65,12 +70,12 @@ header .menuContainer .menuButton {
   cursor: pointer;
 }
 
-header .menuContainer .menuContent {
+header .wrapper .menuContainer .menuContent {
   position: relative;
   width: 50vw;
 }
 
-header .menuContainer .menuContent .menu {
+header .wrapper .menuContainer .menuContent .menu {
   width: 100%;
   list-style: none;
   position: absolute;
@@ -82,33 +87,33 @@ header .menuContainer .menuContent .menu {
   transition: right 0.3s ease-in-out;
 }
 
-header .menuContainer .menuContent .menu .menuItem {
+header .wrapper .menuContainer .menuContent .menu .menuItem {
   padding: 20px;
 }
 
-header .menuContainer .menuContent .menu .menuItem a {
+header .wrapper .menuContainer .menuContent .menu .menuItem a {
   color: #ffffff;
 }
 
-header .menuContainer .menuContent .show {
+header .wrapper .menuContainer .menuContent .show {
   right: 0px;
 }
 
 @media screen and (min-width: 1024px) {
-  header .brandContainer {
+  header .wrapper .brandContainer {
     width: 25%;
   }
-  header .menuContainer {
+  header .wrapper .menuContainer {
     width: 75%;
   }
-  header .menuContainer .menuButton {
+  header .wrapper .menuContainer .menuButton {
     display: none;
   }
-  header .menuContainer .menuContent {
+  header .wrapper .menuContainer .menuContent {
     position: relative;
     width: 100%;
   }
-  header .menuContainer .menuContent .menu {
+  header .wrapper .menuContainer .menuContent .menu {
     width: 100%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
