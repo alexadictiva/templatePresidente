@@ -1,4 +1,5 @@
 #timelineContainer {
+  @include paddingSection;
   display: flex;
   /*  align-items:center;*/
   flex-direction: column;
@@ -13,7 +14,7 @@
         position: absolute;
         top: 120px;
         width: 100%;
-        border: 5px $bgColorSecondary solid;
+        border: 2px $bgColorSecondary solid;
         background-color: $bgColorSecondary;
       }
       ul {
@@ -24,6 +25,7 @@
         justify-content: center;
         li {
           margin: 20px 0;
+
           a {
             font-weight: bold;
             font-size: 4rem;
@@ -32,7 +34,8 @@
             text-align: center;
             text-decoration: none;
             cursor: pointer;
-            &:hover p {
+
+            &:hover ~ p {
               opacity: 1;
             }
           }

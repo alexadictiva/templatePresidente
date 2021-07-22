@@ -2,6 +2,7 @@
   @include paddingSection;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   .aboutDescription {
     padding: 20px 0;
     display: flex;
@@ -11,6 +12,8 @@
   .aboutCard {
     padding: 20px;
     background: $bgColorSecondary;
+    height: 100%;
+    align-self: center;
     .cardContent {
       background-color: $bgColorQuinary;
       padding: 20px;
@@ -24,6 +27,16 @@
           text-transform: uppercase;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aboutContainer {
+    flex-direction: row;
+    .aboutDescription,
+    .aboutCard {
+      width: 50%;
     }
   }
 }
