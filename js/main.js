@@ -32,3 +32,18 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+var button0 = document
+  .getElementById("slid")
+  .addEventListener("click", izquierda);
+var button1 = document
+  .getElementById("slide")
+  .addEventListener("click", derecha);
+var distancia = 200;
+
+function derecha() {
+  document.getElementById("timelineContent").scrollLeft += distancia;
+}
+function izquierda() {
+  document.getElementById("timelineContent").scrollLeft -= distancia;
+}

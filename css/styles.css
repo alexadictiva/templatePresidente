@@ -316,6 +316,104 @@ header .menuContainer .menuContent .show {
   margin-bottom: 10px;
 }
 
+#timelineContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*  align-items:center;*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#timelineContainer #timelineContent {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#timelineContainer #timelineContent #timeline {
+  width: 1024px;
+  position: relative;
+}
+
+#timelineContainer #timelineContent #timeline hr {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  border: 5px #000000 solid;
+  background-color: #000000;
+}
+
+#timelineContainer #timelineContent #timeline ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#timelineContainer #timelineContent #timeline ul li {
+  margin: 20px 0;
+}
+
+#timelineContainer #timelineContent #timeline ul li a {
+  font-weight: bold;
+  font-size: 4rem;
+  color: #000000;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#timelineContainer #timelineContent #timeline ul li a:hover p {
+  opacity: 1;
+}
+
+#timelineContainer #timelineContent #timeline ul li p {
+  width: 200px;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+#timelineContainer #timelineContent #timeline ul li:nth-child(2n-1) {
+  margin-top: 150px;
+}
+
+#timelineContainer #timelineContent #timeline ul li .parYear {
+  margin-bottom: 30px;
+}
+
+#timelineContainer #timelineContent #timeline ul li .imparYear {
+  margin-top: 30px;
+}
+
+#timelineContainer .buttonCotaniner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#timelineContainer .buttonCotaniner button {
+  margin-right: 10px;
+  border: 0;
+  outline: none;
+  background: #000000;
+  color: #ffffff;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
 .cronologyContainer {
   padding: 40px 20px;
   background-color: #3e3e3e;
