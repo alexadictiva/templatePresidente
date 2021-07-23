@@ -34,7 +34,10 @@
   .portfolioContainer {
     .portfolioContent {
       p {
-        font: $headLine3;
+        font: $headLine2;
+        &::before {
+          left: 10px;
+        }
       }
     }
   }

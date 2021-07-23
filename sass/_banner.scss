@@ -1,11 +1,10 @@
 .bannerContainer {
   background: red;
-  height: 80vh;
+
   clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
   .swiper-container {
     .swiper-wrapper {
       .swiper-slide {
-        height: 80vh;
         img {
           height: 100%;
         }

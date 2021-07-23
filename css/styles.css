@@ -131,13 +131,8 @@ header .wrapper .menuContainer .menuContent .show {
 
 .bannerContainer {
   background: red;
-  height: 80vh;
   -webkit-clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
           clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
-}
-
-.bannerContainer .swiper-container .swiper-wrapper .swiper-slide {
-  height: 80vh;
 }
 
 .bannerContainer .swiper-container .swiper-wrapper .swiper-slide img {
@@ -387,8 +382,7 @@ header .wrapper .menuContainer .menuContent .show {
 }
 
 #timelineContainer #timelineContent #timeline ul li a {
-  font-weight: bold;
-  font-size: 4rem;
+  font: bold 5rem/6rem sans-serif;
   color: #000000;
   display: block;
   text-align: center;
@@ -436,7 +430,7 @@ header .wrapper .menuContainer .menuContent .show {
   color: #ffffff;
   padding: 5px 10px;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: bold 5rem/6rem sans-serif;
 }
 
 .cronologyContainer {
@@ -543,7 +537,10 @@ header .wrapper .menuContainer .menuContent .show {
 
 @media screen and (min-width: 768px) {
   .portfolioContainer .portfolioContent p {
-    font: bold 3rem/4rem sans-serif;
+    font: bold 5rem/6rem sans-serif;
+  }
+  .portfolioContainer .portfolioContent p::before {
+    left: 10px;
   }
 }
 
