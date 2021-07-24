@@ -1,12 +1,10 @@
 .bannerContainer {
-  background: red;
-
-  clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
   .swiper-container {
     .swiper-wrapper {
       .swiper-slide {
         img {
-          height: 100%;
+          width: 100%;
+          clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
         }
       }
     }
