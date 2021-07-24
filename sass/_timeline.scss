@@ -1,30 +1,46 @@
 #timelineContainer {
   @include paddingSection;
   display: flex;
-  /*  align-items:center;*/
   flex-direction: column;
   #timelineContent {
-    overflow-x: hidden;
+    overflow-x: scroll;
     width: 100%;
+    height: 410px;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar:horizontal {
+      height: 10px;
+    }
+    &::-webkit-scrollbar-track:horizontal {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 20px;
+      border: 1px solid transparent;
+    }
 
     #timeline {
-      width: 1024px;
       position: relative;
       hr {
         position: absolute;
-        top: 120px;
+        top: 193px;
         width: 100%;
         border: 2px $bgColorSecondary solid;
         background-color: $bgColorSecondary;
       }
-      ul {
+      .timelineItems {
         display: flex;
         list-style: none;
         width: 100%;
-        height: 100%;
+        height: auto;
         justify-content: center;
-        li {
-          margin: 20px 0;
+        .timelineItem {
+          margin-right: 100px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
           a {
             font: $headLine2;
             color: $fontColorPrimary;
@@ -33,23 +49,52 @@
             text-decoration: none;
             cursor: pointer;
 
-            &:hover ~ p {
+            &:hover ~ div {
               opacity: 1;
             }
           }
-          p {
+          div {
+            padding: 0 10px 10px;
+            border-bottom: 1px solid $bgColorSecondary;
             width: 200px;
             opacity: 0;
             transition: opacity 1s ease;
+            position: absolute;
+            font: $caption;
+            .yearContent {
+              padding-left: 15px;
+              display: block;
+              list-style: circle;
+              li {
+                margin: 0;
+              }
+            }
           }
           &:nth-child(2n-1) {
-            margin-top: 150px;
+            margin: 197px 100px 0 0;
+            a {
+              &:hover {
+                border-top: 3px solid $bgColorSecondary;
+              }
+            }
+            div {
+              top: 70px;
+            }
           }
-          .parYear {
-            margin-bottom: 30px;
-          }
-          .imparYear {
-            margin-top: 30px;
+
+          &:nth-child(2n) {
+            margin: 130px 100px 0 0;
+            a {
+              order: 2;
+              &:hover {
+                border-bottom: 3px solid $bgColorSecondary;
+              }
+            }
+            div {
+              order: 1;
+              top: -120px;
+              left: -20px;
+            }
           }
         }
       }
@@ -66,7 +111,6 @@
       color: $fontColorSecondary;
       padding: 5px 10px;
       cursor: pointer;
-      font-size: $headLine2;
     }
   }
 }

@@ -1,8 +1,9 @@
+/*Menu Button*/
 function toggleMenu() {
   var menu = document.querySelector("#menu");
   menu.classList.toggle("show");
 }
-
+/*Banner Slider */
 var swiper1 = new Swiper(".mySwiper1", {
   navigation: {
     nextEl: ".swiper-button-next",
@@ -10,6 +11,7 @@ var swiper1 = new Swiper(".mySwiper1", {
   },
 });
 
+/*Team Slider */
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -33,17 +35,25 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+/*Timeline Slider*/
+var timeline = document.getElementById("timeline");
+var timelineLi = document.querySelectorAll(".timelineItem");
+var calc = timelineLi.length * 220;
+timeline.style.width = calc + "px";
+var distance = 200;
+
 var button0 = document
   .getElementById("slid")
-  .addEventListener("click", izquierda);
+  .addEventListener("click", moveLeft);
+
 var button1 = document
   .getElementById("slide")
-  .addEventListener("click", derecha);
-var distancia = 200;
+  .addEventListener("click", moveRight);
 
-function derecha() {
-  document.getElementById("timelineContent").scrollLeft += distancia;
+function moveLeft() {
+  document.getElementById("timelineContent").scrollLeft -= distance;
 }
-function izquierda() {
-  document.getElementById("timelineContent").scrollLeft -= distancia;
+
+function moveRight() {
+  document.getElementById("timelineContent").scrollLeft += distance;
 }

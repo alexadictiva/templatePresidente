@@ -7,6 +7,7 @@
 
 :root {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,9 +17,10 @@ body {
   overflow-x: hidden;
 }
 
-.wrapper {
+.wrapperMain {
   max-width: 1024px;
   margin: auto;
+  padding-top: 60px;
 }
 
 img {
@@ -33,12 +35,13 @@ a {
 header {
   width: 100%;
   height: 60px;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   z-index: 10;
 }
 
-header .wrapper {
+header .wrapperHeader {
+  margin: auto;
+  max-width: 1024px;
   background: #000000;
   height: 100%;
   display: -webkit-box;
@@ -49,20 +52,21 @@ header .wrapper {
           align-items: center;
 }
 
-header .wrapper .brandContainer {
+header .wrapperHeader .brandContainer {
+  padding-left: 20px;
   width: 50%;
 }
 
-header .wrapper .brandContainer img {
+header .wrapperHeader .brandContainer img {
   height: 100%;
 }
 
-header .wrapper .menuContainer {
+header .wrapperHeader .menuContainer {
   width: 50%;
   text-align: end;
 }
 
-header .wrapper .menuContainer .menuButton {
+header .wrapperHeader .menuContainer .menuButton {
   padding-right: 10px;
   background-color: transparent;
   border: 0;
@@ -70,12 +74,12 @@ header .wrapper .menuContainer .menuButton {
   cursor: pointer;
 }
 
-header .wrapper .menuContainer .menuContent {
+header .wrapperHeader .menuContainer .menuContent {
   position: relative;
   width: 50vw;
 }
 
-header .wrapper .menuContainer .menuContent .menu {
+header .wrapperHeader .menuContainer .menuContent .menu {
   width: 100%;
   list-style: none;
   position: absolute;
@@ -87,33 +91,33 @@ header .wrapper .menuContainer .menuContent .menu {
   transition: right 0.3s ease-in-out;
 }
 
-header .wrapper .menuContainer .menuContent .menu .menuItem {
+header .wrapperHeader .menuContainer .menuContent .menu .menuItem {
   padding: 20px;
 }
 
-header .wrapper .menuContainer .menuContent .menu .menuItem a {
+header .wrapperHeader .menuContainer .menuContent .menu .menuItem a {
   color: #ffffff;
 }
 
-header .wrapper .menuContainer .menuContent .show {
+header .wrapperHeader .menuContainer .menuContent .show {
   right: 0px;
 }
 
 @media screen and (min-width: 1024px) {
-  header .wrapper .brandContainer {
+  header .wrapperHeader .brandContainer {
     width: 25%;
   }
-  header .wrapper .menuContainer {
+  header .wrapperHeader .menuContainer {
     width: 75%;
   }
-  header .wrapper .menuContainer .menuButton {
+  header .wrapperHeader .menuContainer .menuButton {
     display: none;
   }
-  header .wrapper .menuContainer .menuContent {
+  header .wrapperHeader .menuContainer .menuContent {
     position: relative;
     width: 100%;
   }
-  header .wrapper .menuContainer .menuContent .menu {
+  header .wrapperHeader .menuContainer .menuContent .menu {
     width: 100%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -184,8 +188,9 @@ header .wrapper .menuContainer .menuContent .show {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .aboutContainer {
+    padding: 40px 60px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -331,12 +336,17 @@ header .wrapper .menuContainer .menuContent .show {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .teamContainer {
+    padding: 40px 60px;
+  }
+}
+
 #timelineContainer {
   padding: 40px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*  align-items:center;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -344,40 +354,66 @@ header .wrapper .menuContainer .menuContent .show {
 }
 
 #timelineContainer #timelineContent {
-  overflow-x: hidden;
+  overflow-x: scroll;
   width: 100%;
+  height: 410px;
+}
+
+#timelineContainer #timelineContent::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#timelineContainer #timelineContent::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+#timelineContainer #timelineContent::-webkit-scrollbar-track:horizontal {
+  background-color: transparent;
+}
+
+#timelineContainer #timelineContent::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 20px;
+  border: 1px solid transparent;
 }
 
 #timelineContainer #timelineContent #timeline {
-  width: 1024px;
   position: relative;
 }
 
 #timelineContainer #timelineContent #timeline hr {
   position: absolute;
-  top: 120px;
+  top: 193px;
   width: 100%;
   border: 2px #000000 solid;
   background-color: #000000;
 }
 
-#timelineContainer #timelineContent #timeline ul {
+#timelineContainer #timelineContent #timeline .timelineItems {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
   width: 100%;
-  height: 100%;
+  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-#timelineContainer #timelineContent #timeline ul li {
-  margin: 20px 0;
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem {
+  margin-right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
 }
 
-#timelineContainer #timelineContent #timeline ul li a {
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem a {
   font: bold 5rem/6rem sans-serif;
   color: #000000;
   display: block;
@@ -386,27 +422,63 @@ header .wrapper .menuContainer .menuContent .show {
   cursor: pointer;
 }
 
-#timelineContainer #timelineContent #timeline ul li a:hover ~ p {
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem a:hover ~ div {
   opacity: 1;
 }
 
-#timelineContainer #timelineContent #timeline ul li p {
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem div {
+  padding: 0 10px 10px;
+  border-bottom: 1px solid #000000;
   width: 200px;
   opacity: 0;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
+  position: absolute;
+  font: normal 1.2rem/1.5rem sans-serif;
 }
 
-#timelineContainer #timelineContent #timeline ul li:nth-child(2n-1) {
-  margin-top: 150px;
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem div .yearContent {
+  padding-left: 15px;
+  display: block;
+  list-style: circle;
 }
 
-#timelineContainer #timelineContent #timeline ul li .parYear {
-  margin-bottom: 30px;
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem div .yearContent li {
+  margin: 0;
 }
 
-#timelineContainer #timelineContent #timeline ul li .imparYear {
-  margin-top: 30px;
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n-1) {
+  margin: 197px 100px 0 0;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n-1) a:hover {
+  border-top: 3px solid #000000;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n-1) div {
+  top: 70px;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n) {
+  margin: 130px 100px 0 0;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n) a {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n) a:hover {
+  border-bottom: 3px solid #000000;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n) div {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  top: -120px;
+  left: -20px;
 }
 
 #timelineContainer .buttonCotaniner {
@@ -426,7 +498,6 @@ header .wrapper .menuContainer .menuContent .show {
   color: #ffffff;
   padding: 5px 10px;
   cursor: pointer;
-  font-size: bold 5rem/6rem sans-serif;
 }
 
 .cronologyContainer {

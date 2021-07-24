@@ -5,6 +5,7 @@
 }
 :root {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font: $body1;
@@ -12,10 +13,10 @@ body {
   background-color: $bgColorPrimary;
   overflow-x: hidden;
 }
-.wrapper {
+.wrapperMain {
   max-width: 1024px;
-
   margin: auto;
+  padding-top: 60px;
 }
 
 img {
