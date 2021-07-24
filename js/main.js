@@ -12,13 +12,10 @@ var swiper1 = new Swiper(".mySwiper1", {
 });
 
 /*Team Slider */
-var swiper = new Swiper(".mySwiper", {
+var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 1,
   spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+
   breakpoints: {
     640: {
       slidesPerView: 2,
@@ -33,21 +30,51 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 50,
     },
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+var swiper3 = new Swiper(".mySwiper3", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 /*Timeline Slider*/
 var timeline = document.getElementById("timeline");
 var timelineLi = document.querySelectorAll(".timelineItem");
-var calc = timelineLi.length * 220;
+var calc = timelineLi.length * 240;
 timeline.style.width = calc + "px";
-var distance = 200;
+var distance = window.screen.width - 50;
+
+console.log(distance);
 
 var button0 = document
-  .getElementById("slid")
+  .getElementById("btnLeft")
   .addEventListener("click", moveLeft);
 
 var button1 = document
-  .getElementById("slide")
+  .getElementById("btnRight")
   .addEventListener("click", moveRight);
 
 function moveLeft() {
