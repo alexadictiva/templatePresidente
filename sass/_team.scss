@@ -18,7 +18,7 @@
         margin-right: 20px;
         padding: 20px;
         font-size: 18px;
-        background: #fff;
+        background: $bgColorPrimary;
         border-bottom: solid $bgColorTertiary 5px;
 
         img {
@@ -52,7 +52,4 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   display: none;
-}
-
-@media screen and (min-width: 768px) {
 }
