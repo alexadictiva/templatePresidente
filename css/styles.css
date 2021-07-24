@@ -621,7 +621,7 @@ header .wrapperHeader .menuContainer .menuContent .show {
 }
 
 .footerContainer {
-  padding: 40px 20px 0;
+  padding: 40px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
