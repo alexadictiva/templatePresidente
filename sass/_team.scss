@@ -20,7 +20,34 @@
         font-size: 18px;
         background: $bgColorPrimary;
         border-bottom: solid $bgColorTertiary 5px;
-
+        position: relative;
+        .overlay {
+          position: absolute;
+          width: 100%;
+          background: $overlay;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: none;
+          div {
+            border-radius: 50%;
+            border: 5px $white solid;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+              color: $fontColorSecondary;
+              font-weight: bold;
+            }
+          }
+        }
+        &:hover .overlay {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         img {
           display: block;
           width: 100%;
