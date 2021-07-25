@@ -66,9 +66,16 @@
             .yearContent {
               padding-left: 15px;
               display: block;
-              list-style: circle;
+              list-style: none;
               li {
                 margin: 0;
+                position: relative;
+                padding: 2.5px 0;
+                &::before {
+                  content: url(./../assets/icons/crossBlack.svg);
+                  position: absolute;
+                  left: -20px;
+                }
               }
             }
           }

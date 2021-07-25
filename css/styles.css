@@ -363,6 +363,7 @@ header .wrapperHeader .menuContainer .menuContent .show {
   overflow-x: scroll;
   -ms-scroll-snap-type: x proximity;
       scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
   width: 100%;
   height: 410px;
 }
@@ -449,11 +450,19 @@ header .wrapperHeader .menuContainer .menuContent .show {
 #timelineContainer #timelineContent #timeline .timelineItems .timelineItem div .yearContent {
   padding-left: 15px;
   display: block;
-  list-style: circle;
+  list-style: none;
 }
 
 #timelineContainer #timelineContent #timeline .timelineItems .timelineItem div .yearContent li {
   margin: 0;
+  position: relative;
+  padding: 2.5px 0;
+}
+
+#timelineContainer #timelineContent #timeline .timelineItems .timelineItem div .yearContent li::before {
+  content: url(./../assets/icons/crossBlack.svg);
+  position: absolute;
+  left: -20px;
 }
 
 #timelineContainer #timelineContent #timeline .timelineItems .timelineItem:nth-child(2n-1) {
@@ -597,10 +606,11 @@ header .wrapperHeader .menuContainer .menuContent .show {
 }
 
 .portfolioContainer .portfolioContent p::before {
-  content: "+ ";
+  content: url(./../assets/icons/crossBlack.svg);
   color: #000000;
   position: absolute;
   left: 15px;
+  top: 5px;
 }
 
 .portfolioContainer .portfolioContent p:hover {
@@ -617,6 +627,7 @@ header .wrapperHeader .menuContainer .menuContent .show {
   }
   .portfolioContainer .portfolioContent p::before {
     left: 10px;
+    top: -3px;
   }
 }
 

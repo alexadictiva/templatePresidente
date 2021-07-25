@@ -15,11 +15,13 @@
         color: $fontColorSecondary;
       }
       &::before {
-        content: "+ ";
+        content: url(./../assets/icons/crossBlack.svg);
         color: $fontColorPrimary;
         position: absolute;
         left: 15px;
+        top: 5px;
       }
+
       &:hover {
         background-color: $bgColorPrimary;
       }
@@ -37,6 +39,7 @@
         font: $headLine2;
         &::before {
           left: 10px;
+          top: -3px;
         }
       }
     }
