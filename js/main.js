@@ -72,7 +72,7 @@ var calc = timelineLi.length * 240;
 timeline.style.width = calc + "px";
 var distance = window.screen.width - 50;
 
-console.log(distance);
+//console.log(distance);
 
 var button0 = document
   .getElementById("btnLeft")
@@ -83,9 +83,11 @@ var button1 = document
   .addEventListener("click", moveRight);
 
 function moveLeft() {
-  document.getElementById("timelineContent").scrollLeft -= distance;
+  var left = (document.getElementById("timelineContent").scrollLeft -=
+    distance);
 }
 
 function moveRight() {
-  document.getElementById("timelineContent").scrollLeft += distance;
+  var right = (document.getElementById("timelineContent").scrollLeft +=
+    distance);
 }
