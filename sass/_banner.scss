@@ -2,7 +2,8 @@
   .swiper-container {
     .swiper-wrapper {
       .swiper-slide {
-        img {
+        picture img {
+          height: 90vh;
           width: 100%;
           clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
         }

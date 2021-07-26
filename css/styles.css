@@ -134,7 +134,8 @@ header .wrapperHeader .menuContainer .menuContent .show {
   }
 }
 
-.bannerContainer .swiper-container .swiper-wrapper .swiper-slide img {
+.bannerContainer .swiper-container .swiper-wrapper .swiper-slide picture img {
+  height: 90vh;
   width: 100%;
   -webkit-clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
           clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
