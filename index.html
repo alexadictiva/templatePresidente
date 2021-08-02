@@ -11,6 +11,10 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Template</title>
   </head>
   <body>
@@ -191,7 +195,10 @@
             ></span>
           </div>
         </section>
-        <section class="aboutContainer" id="about">
+        <section
+          class="aboutContainer wow animate__animated animate__fadeInLeft"
+          id="about"
+        >
           <div class="aboutDescription">
             <p>
               Somos un grupo empresario mendocino, de origen familiar, que
@@ -240,7 +247,10 @@
             </div>
           </div>
         </section>
-        <section class="philosophyContainer" id="philosophy">
+        <section
+          class="philosophyContainer wow animate__animated animate__fadeInRight"
+          id="philosophy"
+        >
           <div class="philosophyDescription">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis iure
@@ -281,7 +291,10 @@
             </div>
           </div>
         </section>
-        <section class="teamContainer" id="team">
+        <section
+          class="teamContainer wow animate__animated animate__fadeInLeft"
+          id="team"
+        >
           <div
             class="
               directorioContainer
@@ -692,7 +705,10 @@
             </div>
           </div>
         </section>
-        <section class="portfolioContainer" id="portfolio">
+        <section
+          class="portfolioContainer wow animate__animated animate__fadeInRight"
+          id="portfolio"
+        >
           <div class="portfolioContent">
             <p>
               <a href="#"> Desarrollamos Inmobiliarios</a>
@@ -711,7 +727,10 @@
             </p>
           </div>
         </section>
-        <section class="timelineContainer" id="timelineContainer">
+        <section
+          class="timelineContainer wow animate__animated animate__fadeInLeft"
+          id="timelineContainer"
+        >
           <div id="timelineContent">
             <div id="timeline">
               <hr />
@@ -794,7 +813,10 @@
             </button>
           </div>
         </section>
-        <section class="cronologyContainer" id="cronology">
+        <section
+          class="cronologyContainer wow animate__animated animate__fadeInLeft"
+          id="cronology"
+        >
           <div class="cronologyContent">
             <div class="cronologyCard">
               <img src="https://picsum.photos/id/211/600/400" alt="" />
@@ -815,7 +837,10 @@
           </div>
         </section>
       </main>
-      <footer class="footerContainer" id="contact">
+      <footer
+        class="footerContainer wow animate__animated animate__fadeInRight"
+        id="contact"
+      >
         <section class="formContainer">
           <h3>Contacto</h3>
           <form action="#" method="POST">
@@ -858,5 +883,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/wow/wow.min.js"></script>
+
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

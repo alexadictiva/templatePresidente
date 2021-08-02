@@ -19,7 +19,7 @@ body {
 }
 
 .wrapperMain {
-  max-width: 1024px;
+  max-width: 1366px;
   margin: auto;
   padding-top: 60px;
 }
@@ -42,7 +42,7 @@ header {
 
 header .wrapperHeader {
   margin: auto;
-  max-width: 1024px;
+  max-width: 1366px;
   background: #000000;
   height: 100%;
   display: -webkit-box;
@@ -785,6 +785,8 @@ header .wrapperHeader .menuContainer .menuContent .show {
   }
   .footerContainer .contactContainer {
     width: 50%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 /*# sourceMappingURL=styles.css.map */
